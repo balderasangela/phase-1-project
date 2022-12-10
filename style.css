@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+/* universal */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'VT323', monospace;
+
+
+}
+
+body {
+  background-color: var(--pomodoro);
+  transition: background-color 1s ease;
+  user-select: none;
+}
+
+.card {
+  margin: 35px 50px 12px 10px;
+  box-shadow: 10px 10px rgba(54, 54, 54, 0.75);
+
+  display: flex;
+  overflow: auto;
+  color: #f7fbfb;
+  border: 4px solid #dfe2da;
+
+}
+
+div.card {
+  background-color: #f5dde3;
+}
+
+/* todo list */
+.task-header,
+.pomo-header,
+.api-header {
+  background-color: #f59bb4;
+  display: flex;
+  justify-content: space-around;
+
+
+}
+
+.task-header i,
+.pomo-header i,
+.api-header i {
+  font-size: 24px;
+  padding-top: 12px;
+  padding-left: 8px;
+  display: flex;
+  justify-content: space-around;
+}
+
+#new-task-description {
+  display: block;
+  margin-top: 5px;
+  margin-left: 20%;
+}
+
+input[type=submit] {
+  margin-left: 25%;
+  color: black;
+}
+
+li {
+  color: black;
+  list-style: underline;
+  padding-left: 2px;
+  font-size: 18px;
+}
+
+.deleteButton {
+  background-color: transparent;
+  border: none;
+}
+
+.task-card {
+  height: 350px;
+
+}
+
+
+/* pomodoro card */
+.card-pomo {
+  height: 580px;
+  position: relative;
+}
+
+.timer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  text-align: center;
+}
+
+.clock {
+  margin-top: 60px;
+  margin-bottom: 30px;
+  font-size: 10rem;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  color: rgb(255, 255, 255);
+  text-shadow: rgb(0, 0, 0) 3px 0 10px;
+
+}
+
+.mode-button {
+  font-size: 18px;
+  height: 28px;
+  cursor: pointer;
+
+  color: rgb(124, 21, 176);
+  border: 3px solid transparent;
+
+  margin: 0px;
+  border-radius: 4px;
+  padding: 2px 12px;
+  background: none;
+
+}
+
+.mode-button.active {
+  border: 2px solid;
+  border-color: rgb(255, 255, 255);
+}
+
+.main-button {
+  cursor: pointer;
+  font-size: 22px;
+  height: 55px;
+  text-transform: uppercase;
+  color: hsl(0, 0%, 100%);
+  text-shadow: rgb(0, 0, 0) 3px 0 10px;
+  
+  font-weight: bold;
+  width: 200px;
+  background-color: rgba(171, 29, 91, 0);
+  border-width: initial;
+  border: 2px solid rgb(0, 0, 0);
+  margin: 20px 0px 0px;
+  padding: 0px 12px;
+  border-radius: 4px;
+
+}
+
+
+
+.main-button.active {
+  transform: translateY(6px);
+
+}
+
+.hidden {
+  display: none;
+}
+
+/* api card */
+#quote,
+#author,
+#new-quote {
+  color: black;
+}
+
+#new-quote {
+  margin: 20px 0px 20px 80px;
+  padding: 0px 12px;
+}
+
+#quote-text {
+  padding:5px;
+  margin:2px;
+}
+
+.api-card {
+  height: 200px;
+  
+}
+
+/* music */
+.music-card {
+  margin: 5px 50px 10px 10px;
+  box-shadow: 10px 10px rgba(54, 54, 54, 0.75);
+  height: 90px;
+  display: flex;
+  overflow: auto;
+  color: #f7fbfb;
+  border: 4px solid #dfe2da;
+
+}

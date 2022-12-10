@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- styles and font -->
+    <link rel="stylesheet" href="style.css">
+    </link>
+    <script src="https://kit.fontawesome.com/54909cdd9c.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- js link -->
+    <script defer src="index.js"></script>
+    <!-- title -->
+    <title>Ragdoll Studies</title>
+</head>
+<body>
+
+    <!-- cards -->
+    <!-- start of pomodoro -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-sm-12">
+                <div class="card">
+                    <div class="card-pomo">
+
+
+                        <div class="task-header">
+
+                            <h1>Pomodoro.exe</h1>
+
+                            <i class="fa-solid fa-window-minimize"></i>
+                            <i class="fa-regular fa-window-maximize"></i>
+                            <i class="fa-regular fa-rectangle-xmark"></i>
+                        </div>
+
+                        <div class="app">
+
+                            <div class="timer">
+                                <div class="button-group mode-buttons" id="js-mode-buttons">
+                                    <button data-mode="pomodoro" class="button active mode-button" id="js-pomodoro">
+                                        Pomodoro
+                                    </button>
+                                    <button data-mode="shortBreak" class="button mode-button" id="js-short-break">
+                                        Short break
+                                    </button>
+                                    <button data-mode="longBreak" class="button mode-button" id="js-long-break">
+                                        Long break
+                                    </button>
+                                </div>
+                                <div class="clock" id="js-clock">
+                                    <span id="js-minutes">25</span>
+                                    <span class="separator">:</span>
+                                    <span id="js-seconds">00</span>
+                                </div>
+                                <button class="main-button" data-action="start" id="js-btn">
+                                    Start
+                                </button>
+                            </div>
+                        </div>
+                        <div class="hidden">
+                            <audio src="pomo.mp3" data-sound="pomodoro"></audio>
+                            <audio src="break.mp3" data-sound="shortBreak"></audio>
+                            <audio src="break.mp3" data-sound="longBreak"></audio>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <!-- end of pomodoro -->
+
+            <!-- beginning of notepad todo list -->
+            <div class="col-md-4 col-sm-12">
+                <div class="card">
+                    <div class="task-card">
+
+
+                        <form id="create-task-form" action="" method="POST">
+
+                            <div class="task-header">
+
+                                <h1>Notepad.txt</h1>
+
+                                <i class="fa-solid fa-window-minimize"></i>
+                                <i class="fa-regular fa-window-maximize"></i>
+                                <i class="fa-regular fa-rectangle-xmark"></i>
+                            </div>
+
+                            <input type="text" id="new-task-description" name="new-task-description"
+                                placeholder="description">
+
+                            <span>
+                                <div id="list">
+                                    <ul id="tasks">
+                                    </ul>
+                            </span>
+
+                            <span><input type="submit" value="Create New Task"></span>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <!-- end of todo list -->
+
+            <!-- quote api intro -->
+            <div class="container">
+                <div class="row">
+
+
+                    <div class="col-md-12 col-sm-12">
+                        <div class="card">
+                            <div class="api-card">
+
+
+                                <div class="task-header">
+
+                                    <h1>Quote.PNG</h1>
+
+                                    <i class="fa-solid fa-window-minimize"></i>
+                                    <i class="fa-regular fa-window-maximize"></i>
+                                    <i class="fa-regular fa-rectangle-xmark"></i>
+                                </div>
+
+                                <!-- sample-->
+                                <div class="quote-text">
+
+                                    <span id="quote">What you are is what you have been. What you'll be is what you do
+                                        now.</span>
+                                </div>
+                                <!-- Author -->
+                                <div class="quote-author">
+                                    <span id="author">Buddha</span>
+                                </div>
+                                <!-- Buttons -->
+
+                                <button id="new-quote">New Quote</button>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- quote api ends -->
+
+
+    </div>
+
+
+    <!-- music -->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="music">
+                    <div class="music-card">
+                        <div class="task-header">
+                            <h1>Music.MP3</h1>
+                        </div>
+                        <iframe style="border-radius:12px"
+                            src="https://open.spotify.com/embed/playlist/37i9dQZF1DZ06evO0Wrd8k?utm_source=generator"
+                            width="100%" height="80" frameBorder="0" allowfullscreen=""
+                            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                            loading="lazy"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ends for music -->
+    <!-- background color -->
+    <style type="text/css">
+        body {
+            background: #d7728b !important;
+        }
+    </style>
+</body>
+
+</html>
